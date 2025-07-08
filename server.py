@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder="client/templates", static_folder="client/
 @app.route('/')
 def LandingPage():
 
-    return 'domain owned by olyium now.'
+    return render_template("index.html")
 
 @app.errorhandler(Exception)
 def handle_all_errors(e):
