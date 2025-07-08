@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athletix - Soccer Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+
+<body>
+ <p style="position: fixed; right: 25px; bottom: 25px; background-color: white; padding: 7px; color: black; z-index: 9999; border-radius:6px;">
+  
+</p>
+
+  <header id="navbar">
+    <div class="container header-container">
+      <div class="logo">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/934319ac-1d5f-417e-91bf-24fec4ef5792-KSylDUxOntRQ4d5RrQ0qFBCIyCLBjX.png"
+          alt="Athletix Logo">
+        <h1>Athletix</h1>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Elevate Your Soccer Game</h1>
+      <p>Join Athletix, Chesapeake's premier soccer company providing top-notch training, equipment, and events for
+        players of all ages and skill levels.</p>
+      <div class="hero-buttons">
+        <a href="#shop" class="btn btn-primary">Shop Now</a>
+        <a href="#schedule" class="btn btn-secondary">View Schedule</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Us</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Who We Are</h3>
+          <p>Athletix is Chesapeake, Virginia's leading soccer company dedicated to developing skilled players through
+            professional training, quality equipment, and competitive events. Founded by passionate soccer enthusiasts,
+            we strive to create an inclusive environment where players of all ages can grow and excel in the beautiful
+            game.</p>
+          <p>Our mission is to foster a love for soccer in the community while providing the resources and opportunities
+            needed for players to reach their full potential. Whether you're a beginner looking to learn the basics or
+            an experienced player seeking to refine your skills, Athletix has something for everyone.</p>
+          <a href="#services" class="btn btn-primary">Our Services</a>
+        </div>
+        <div class="about-image">
+          <img
+            src="{{ url_for('static', filename='images/fkahh_man_playing_football.jpg') }}"
+            alt="Soccer Field">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3>Training Programs</h3>
+          <p>Professional coaching for all skill levels, from beginners to advanced players. Our structured programs
+            focus on technique, tactics, fitness, and mental aspects of the game.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Tournaments & Events</h3>
+          <p>Regular tournaments, friendly matches, and special events to test skills in a competitive environment.
+            Perfect for team building and gaining real game experience.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>Equipment & Gear</h3>
+          <p>High-quality soccer equipment and apparel from top brands. We offer everything from soccer balls and cleats
+            to training gear and team uniforms with professional fitting services.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Youth Programs</h3>
+          <p>Specialized programs for children of all ages, designed to develop fundamental skills while keeping the
+            game fun and engaging. We foster teamwork and build confidence in young players.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" class="section shop">
+    <div class="container">
+      <div class="section-title">
+        <h2>Shop</h2>
+      </div>
+      <div class="shop-categories">
+        <button class="category-btn active" data-category="all">All Products</button>
+        <button class="category-btn" data-category="equipment">Equipment</button>
+        <button class="category-btn" data-category="apparel">Apparel</button>
+        <button class="category-btn" data-category="accessories">Accessories</button>
+        <button class="category-btn" data-category="training">Training</button>
+      </div>
+      <div class="products-grid">
+        <div class="product-card" data-category="equipment">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+              alt="Soccer Ball">
+            <div class="product-overlay">
+              <div class="product-actions">
+                <a href="#" class="quick-view"><i class="fas fa-eye"></i></a>
+                <a href="#" class="add-to-wishlist"><i class="fas fa-heart"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Professional Match Ball</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(24)</span>
+            </div>
+            <p class="product-price">$49.99</p>
+            <div class="add-to-cart">
+              <a href="#" class="btn btn-outline add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="apparel">
+          <div class="product-image">
+            <img
+              src="{{ url_for('static', filename='images/soccer_jersy.png') }}"
+              alt="Soccer Jersey">
+            <div class="product-overlay">
+              <div class="product-actions">
+                <a href="#" class="quick-view"><i class="fas fa-eye"></i></a>
+                <a href="#" class="add-to-wishlist"><i class="fas fa-heart"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Athletix Team Jersey</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(42)</span>
+            </div>
+            <p class="product-price">$64.99</p>
+            <div class="add-to-cart">
+              <a href="#" class="btn btn-outline add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="equipment">
+          <div class="product-image">
+            <img
+              src="{{ url_for('static', filename='images/adidas-x-speedportal.1-football-boots-soccer-cleats-review-1920-x-1082-jpg.png') }}"
+              alt="Soccer Cleats">
+            <div class="product-overlay">
+              <div class="product-actions">
+                <a href="#" class="quick-view"><i class="fas fa-eye"></i></a>
+                <a href="#" class="add-to-wishlist"><i class="fas fa-heart"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Pro Cleats</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(18)</span>
+            </div>
+            <p class="product-price">$129.99</p>
+            <div class="add-to-cart">
+              <a href="#" class="btn btn-outline add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="accessories">
+          <div class="product-image">
+            <img
+              src="{{ url_for('static', filename='images/e609f8ff-867b-4529-a3e5-6cd4e1651c4f.a74b6668a29520b89940250077770a7e.png') }}"
+              alt="Shin Guards">
+            <div class="product-overlay">
+              <div class="product-actions">
+                <a href="#" class="quick-view"><i class="fas fa-eye"></i></a>
+                <a href="#" class="add-to-wishlist"><i class="fas fa-heart"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Protective Shin Guards</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(31)</span>
+            </div>
+            <p class="product-price">$34.99</p>
+            <div class="add-to-cart">
+              <a href="#" class="btn btn-outline add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="training">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+              alt="Training Cones">
+            <div class="product-overlay">
+              <div class="product-actions">
+                <a href="#" class="quick-view"><i class="fas fa-eye"></i></a>
+                <a href="#" class="add-to-wishlist"><i class="fas fa-heart"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Training Cone Set</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(15)</span>
+            </div>
+            <p class="product-price">$24.99</p>
+            <div class="add-to-cart">
+              <a href="#" class="btn btn-outline add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="apparel">
+          <div class="product-image">
+            <img
+              src="{{ url_for('static', filename='images/grips_socks_8_1200x.jpg') }}"
+              alt="Soccer Socks">
+            <div class="product-overlay">
+              <div class="product-actions">
+                <a href="#" class="quick-view"><i class="fas fa-eye"></i></a>
+                <a href="#" class="add-to-wishlist"><i class="fas fa-heart"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Professional Soccer Socks</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(27)</span>
+            </div>
+            <p class="product-price">$14.99</p>
+            <div class="add-to-cart">
+              <a href="#" class="btn btn-outline add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-all-container">
+        <a href="#" class="btn btn-primary">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="section schedule">
+    <div class="container">
+      <div class="section-title">
+        <h2>Schedule</h2>
+      </div>
+      <div class="schedule-container">
+        <div class="calendar-container">
+          <div class="calendar-header">
+            <h3 class="month-year">May 2025</h3>
+            <div class="calendar-nav">
+              <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+              <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="calendar-grid">
+          </div>
+        </div>
+        <div class="events-list">
+          <h3>Upcoming Events</h3>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="event-day">20</div>
+              <div class="event-month">May</div>
+            </div>
+            <div class="event-details">
+              <h4>Youth Soccer Camp</h4>
+              <p>Intensive training camp for players ages 8-12</p>
+              <div class="event-time">
+                <i class="far fa-clock"></i>
+                <span>9:00 AM - 3:00 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="event-day">25</div>
+              <div class="event-month">May</div>
+            </div>
+            <div class="event-details">
+              <h4>Athletix Cup Tournament</h4>
+              <p>Annual tournament for local teams</p>
+              <div class="event-time">
+                <i class="far fa-clock"></i>
+                <span>All Day</span>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="event-day">01</div>
+              <div class="event-month">Jun</div>
+            </div>
+            <div class="event-details">
+              <h4>Advanced Skills Workshop</h4>
+              <p>Special training session with guest coaches</p>
+              <div class="event-time">
+                <i class="far fa-clock"></i>
+                <span>6:00 PM - 8:00 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="event-day">10</div>
+              <div class="event-month">Jun</div>
+            </div>
+            <div class="event-details">
+              <h4>Free Community Play Day</h4>
+              <p>Open field play for all community members</p>
+              <div class="event-time">
+                <i class="far fa-clock"></i>
+                <span>10:00 AM - 4:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>1234 Soccer Way, Chesapeake, VA 23320, United States</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>(757) 555-0123</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>info@athletixsoccer.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 8:00 PM<br>
+                  Saturday: 9:00 AM - 6:00 PM<br>
+                  Sunday: 10:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" class="form-control" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img
+              src="{{ url_for('static', filename='images/logo.png') }}"
+              alt="Athletix Logo">
+            <h2>Athletix</h2>
+          </div>
+          <p>Chesapeake's premier soccer company providing top-notch training, equipment, and events for players of all
+            ages and skill levels.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Training Programs</a></li>
+            <li><a href="#services">Tournaments & Events</a></li>
+            <li><a href="#services">Equipment & Gear</a></li>
+            <li><a href="#services">Youth Programs</a></li>
+            <li><a href="#services">Team Coaching</a></li>
+            <li><a href="#services">Private Lessons</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter to receive the latest updates and offers.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Athletix Soccer Company. <strong>NO RIGHTS, NO RIGHTS ARE OWNED FOR THIS WEBSITE; NO RIGHTS ARE</strong> Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</body>
+
+</html>
