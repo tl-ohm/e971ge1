@@ -6,7 +6,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 
 app = FastAPI() # yes
 
-app.mount("/static", StaticFiles(directory="client/static"), name="static")
+app.mount("/static", StaticFiles(directory="client"), name="static")
 templates = Jinja2Templates(directory="client/templates")
 
 @app.get("/", response_class=HTMLResponse)
@@ -24,4 +24,5 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app)
+
 
